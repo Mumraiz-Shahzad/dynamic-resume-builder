@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mumraiz Shahzad - Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Dynamic Resume Builder</h1>
+    </header>
+
+    <form id="resumeForm">
+        <h2>Personal Information</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        
+        <label for="contact">Contact No:</label>
+        <input type="text" id="contact" required>
+        
+        <h2>Work Experience</h2>
+        <label for="jobTitle">Job Title:</label>
+        <input type="text" id="jobTitle" required>
+
+        <label for="company">Company:</label>
+        <input type="text" id="company" required>
+
+        <label for="duration">Duration:</label>
+        <input type="text" id="duration" required>
+
+        <h2>Education</h2>
+        <label for="degree">Degree:</label>
+        <input type="text" id="degree" required>
+
+        <label for="university">University:</label>
+        <input type="text" id="university" required>
+
+        <label for="gradYear">Graduation Year:</label>
+        <input type="text" id="gradYear" required>
+
+        <h2>Skills</h2>
+        <label for="skills">Skills (comma separated):</label>
+        <input type="text" id="skills" required>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+
+    <section id="resume" class="resume">
+        <h2>Generated Resume</h2>
+        <header id="resumeHeader">
+            <h1 id="resumeName"></h1>
+            <p id="resumeContact"></p>
+        </header>
+        <section id="workExperienceSection">
+            <h3>Work Experience</h3>
+            <p id="resumeJobTitle"></p>
+            <p id="resumeCompany"></p>
+            <p id="resumeDuration"></p>
+        </section>
+        <section id="educationSection">
+            <h3>Education</h3>
+            <p id="resumeDegree"></p>
+            <p id="resumeUniversity"></p>
+            <p id="resumeGradYear"></p>
+        </section>
+        <section id="skillsSection">
+            <h3>Skills</h3>
+            <p id="resumeSkills"></p>
+        </section>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
