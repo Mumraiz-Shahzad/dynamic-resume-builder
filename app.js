@@ -17,15 +17,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Populate resume
         document.getElementById("resumeName").innerText = name;
-        document.getElementById("resumeContact").innerText = "Email: " + email + " | Contact: " + contact;
+        document.getElementById("resumeEmail").innerText = "Email: " + email;
+        document.getElementById("resumeContact").innerText = "Contact: " + contact;        
         document.getElementById("resumeJobTitle").innerText = jobTitle;
         document.getElementById("resumeCompany").innerText = company;
-        document.getElementById("resumeJobDescription").innerText = jobDescription;
+        document.getElementById("resumeJobDescription").innerHTML = jobDescription.split(",").map(desc => `<li>${desc.trim()}</li>`).join("");
         document.getElementById("resumeDuration").innerText = duration;
         document.getElementById("resumeDegree").innerText = degree;
         document.getElementById("resumeUniversity").innerText = university;
         document.getElementById("resumeGradYear").innerText = gradYear;
-        document.getElementById("resumeSkills").innerText = skills;
+        document.getElementById("resumeSkills").innerHTML = skills.split(",").map(skill => `<li>${skill.trim()}</li>`).join("");
+    
 
         // Clear form fields
         form.reset();
@@ -43,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
         form.style.display = "block";
     });
 });
-
 
 
 
