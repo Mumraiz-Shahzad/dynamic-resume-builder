@@ -29,6 +29,9 @@
         <label for="company">Company:</label>
         <input type="text" id="company" required>
 
+        <label for="jobDescription">Job Description (comma separated):</label>
+        <input type="text" id="jobDescription" required>
+
         <label for="duration">Duration:</label>
         <input type="text" id="duration" required>
 
@@ -53,12 +56,14 @@
         <h2>Generated Resume</h2>
         <header id="resumeHeader">
             <h1 id="resumeName"></h1>
+            <p id="resumeEmail"></p>
             <p id="resumeContact"></p>
         </header>
         <section id="workExperienceSection">
             <h3>Work Experience</h3>
             <p id="resumeJobTitle"></p>
             <p id="resumeCompany"></p>
+            <p id="resumeJobDescription"></p>
             <p id="resumeDuration"></p>
         </section>
         <section id="educationSection">
@@ -76,3 +81,7 @@
     <script src="app.js"></script>
 </body>
 </html>
+<!-- Add Print Button here -->
+<button id="printButton">Print Resume</button>
+</section>
+

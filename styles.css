@@ -14,11 +14,12 @@ h1 {
     font-size: 2em;
 }
 
+/* Form styling */
 form {
     background: white;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 label {
@@ -26,7 +27,8 @@ label {
     margin-top: 10px;
 }
 
-input[type="text"], input[type="email"] {
+input[type="text"],
+input[type="email"] {
     width: calc(100% - 22px);
     padding: 10px;
     margin-top: 5px;
@@ -48,14 +50,65 @@ button:hover {
     background-color: #0056b3;
 }
 
+/* Resume styling */
 .resume {
     margin-top: 20px;
     padding: 20px;
     background: white;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.resume h2,
+#workExperienceSection h3,
+#educationSection h3,
+#skillsSection h3 {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin: 10px 0 5px 0;
+    position: relative;
+}
+
+.resume h2::after,
+#workExperienceSection h3::after,
+#educationSection h3::after,
+#skillsSection h3::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    background-color: black;
 }
 
 .resume h2 {
-    margin-top: 0;
+    margin-bottom: 10px;
 }
+
+/* Additional styling for the resume sections */
+#workExperienceSection,
+#educationSection,
+#skillsSection {
+    margin-bottom: 20px;
+}
+#printButton {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #28a745; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#printButton:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+
+
